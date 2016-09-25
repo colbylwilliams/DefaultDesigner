@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionModel>
+	<Extension
+		path="/MonoDevelop/Ide/DisplayBindings">
+		<DisplayBinding
+			class="MonoDevelop.MacDev.XcodeInterfaceBuilderDisplayBinding"
+			id="InterfaceBuilderBeforeIPhoneDesinger"
+			insertbefore="IPhoneDesigner" />
+	</Extension>
+</ExtensionModel>
