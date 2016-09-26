@@ -16,7 +16,7 @@ To install and use in Xamarin Studio:
 
 ## About
 
-Created by [Colby Williams][1] mostly by copy/pasting code by [David Karlaš][2].  
+Created by [Colby Williams][1], mostly by copy/pasting code from [David Karlaš][2].  
 
 Licensed under the MIT License (MIT).  See [LICENSE][3] for details.
 
