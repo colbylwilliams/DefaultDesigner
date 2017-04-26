@@ -2,7 +2,7 @@ CONFIGURATION=Release
 
 ADDIN_NAME=DefaultDesigner
 
-MDTOOL ?= /Applications/Xamarin\ Studio.app/Contents/MacOS/mdtool
+VSTOOL ?= /Applications/Visual\ Studio.app/Contents/MacOS/vstool
 
 
 all : clean Build/$(CONFIGURATION)/$(ADDIN_NAME).mpack
@@ -11,11 +11,11 @@ Build/$(CONFIGURATION) :
 	mkdir -p Build/$(CONFIGURATION)
 
 Build/$(CONFIGURATION)/$(ADDIN_NAME).dll : Build/$(CONFIGURATION)
-	cd $(ADDIN_NAME) && XBuild /p:Configuration=$(CONFIGURATION)
+	cd $(ADDIN_NAME) && msbuild /p:Configuration=$(CONFIGURATION)
 	cp $(ADDIN_NAME)/bin/$(CONFIGURATION)/$(ADDIN_NAME).dll Build/$(CONFIGURATION)
 
 Build/$(CONFIGURATION)/$(ADDIN_NAME).mpack : Build/$(CONFIGURATION)/$(ADDIN_NAME).dll
-	cd Build/$(CONFIGURATION) && $(MDTOOL) setup pack $(ADDIN_NAME).dll
+	cd Build/$(CONFIGURATION) && $(VSTOOL) setup pack $(ADDIN_NAME).dll
 
 clean :
 	rm -rf Build
