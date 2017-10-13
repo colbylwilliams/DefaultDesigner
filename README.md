@@ -17,8 +17,8 @@ Xamarin Studio & Visual Studio for Mac add-in to open xib and storyboard files w
 ### Visual Studio for Mac:
 
 1. Download the `.mpack` file of the [release v1.2][4]
-2. Launch Visual Studio, open the **Visual Studio** menu and select **Add-ins...**
-3. In the bottom left of the _Add-in Manager_ dialog, click **Install from file...**
+2. Launch Visual Studio, open the **Visual Studio** menu and select **Extensions...**
+3. In the bottom left of the _Extensions Manager_ dialog, click **Install from file...**
 4. Choose the `.mpack` file you downloaded in step 1.
 5. When prompted, select **Install**
 
