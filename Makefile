@@ -1,5 +1,6 @@
 CONFIGURATION=Release
 
+ADDIN_PROFILE=net461
 ADDIN_NAME=DefaultDesigner
 
 VSTOOL ?= /Applications/Visual\ Studio.app/Contents/MacOS/vstool
@@ -12,12 +13,12 @@ Build/$(CONFIGURATION) :
 
 Build/$(CONFIGURATION)/$(ADDIN_NAME).dll : Build/$(CONFIGURATION)
 	cd $(ADDIN_NAME) && msbuild /p:Configuration=$(CONFIGURATION)
-	cp $(ADDIN_NAME)/bin/$(CONFIGURATION)/$(ADDIN_NAME).dll Build/$(CONFIGURATION)
+	cp $(ADDIN_NAME)/bin/$(CONFIGURATION)/$(ADDIN_PROFILE)/$(ADDIN_NAME).dll Build/$(CONFIGURATION)
 
 Build/$(CONFIGURATION)/$(ADDIN_NAME).mpack : Build/$(CONFIGURATION)/$(ADDIN_NAME).dll
 	cd Build/$(CONFIGURATION) && $(VSTOOL) setup pack $(ADDIN_NAME).dll
 
 clean :
 	rm -rf Build
-	rm -rf $(ADDIN_NAME)/bin
-	rm -rf $(ADDIN_NAME)/obj
+	#rm -rf $(ADDIN_NAME)/bin
+	#rm -rf $(ADDIN_NAME)/obj

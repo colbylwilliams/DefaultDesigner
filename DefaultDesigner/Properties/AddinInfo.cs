@@ -5,7 +5,7 @@ using Mono.Addins.Description;
 [assembly: Addin (
 	"DefaultDesigner",
 	Namespace = "DefaultDesigner",
-	Version = "1.2"
+	Version = "1.3"
 )]
 
 [assembly: AddinName ("Default Designer")]

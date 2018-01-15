@@ -7,4 +7,11 @@
 			id="InterfaceBuilderBeforeIPhoneDesinger"
 			insertbefore="IPhoneDesigner" />
 	</Extension>
+	<Extension
+		path="/MonoDevelop/Ide/DisplayBindings">
+		<DisplayBinding
+			class="MonoDevelop.MacDev.XcodeInterfaceBuilderDisplayBinding"
+			id="InterfaceBuilderBeforeIOSDesinger"
+			insertbefore="iOSDesigner" />
+	</Extension>
 </ExtensionModel>
